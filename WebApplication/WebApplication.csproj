@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="Shared\Persistence\.idea\.idea.Persistence.dir\.idea\encodings.xml" />
+      <Content Include="Shared\Persistence\.idea\.idea.Persistence.dir\.idea\indexLayout.xml" />
+      <Content Include="Shared\Persistence\.idea\.idea.Persistence.dir\.idea\projectSettingsUpdater.xml" />
+      <Content Include="Shared\Persistence\.idea\.idea.Persistence.dir\.idea\workspace.xml" />
+    </ItemGroup>
+
+</Project>

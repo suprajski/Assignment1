@@ -1,0 +1,47 @@
+@using WebApplication.Auth
+@using WebApplication.Shared.Models
+@using WebApplication.Shared.Persistence
+@using WebApplication.Auth
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu/>
+    </div>
+
+    <div class="main">
+        <div class="top-row px-4">
+            <AuthorizeView>
+                <NotAuthorized>
+                    <button class="btn btn-primary" @onclick="Login">Login</button>
+                </NotAuthorized>
+                <Authorized>
+                    <button class="btn btn-primary" @onclick="Login">Logout</button>
+                </Authorized>
+            </AuthorizeView>
+            <button class="btn btn-primary" @onclick="SignUp">Sign Up</button>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>
+
+@code
+{
+  
+    private void Login()
+    {
+        NavigationManager.NavigateTo("/Login");
+    }
+
+    private void SignUp()
+    {
+        NavigationManager.NavigateTo("/SignUp");
+    }
+
+   
+
+}
